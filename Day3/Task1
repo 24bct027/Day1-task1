@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1: Defining and Calling Functions</title>
+</head>
+<body>
+  <h2>Task 1: Defining and Calling Functions</h2>
+
+  <h4>Fixed Parameter Function:</h4>
+  <button onclick="greetUser()">Call greetUser()</button>
+
+  <h4>Function using <code>arguments</code> object:</h4>
+  <button onclick="sumArguments(10, 20, 30)">Call sumArguments(10, 20, 30)</button>
+
+  <h4>Function using <code>...rest</code> operator:</h4>
+  <button onclick="sumRest(5, 15, 25, 35)">Call sumRest(5, 15, 25, 35)</button>
+
+  <script>
+    function greetUser() {
+      const message = "Hello, welcome to JavaScript functions!";
+      console.log(message);
+    }
+
+
+    function sumArguments() {
+      let total = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+      }
+      console.log("Sum using 'arguments' object:", total);
+    }
+
+   {
+      const total = numbers.reduce((acc, curr) => acc + curr, 0);
+      console.log("Sum using '...rest' operator:", total);
+    }
+  </script>
+</body>
+</html>
+[30/07, 19:57] Vicky Clg: <!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2: Function Expressions & Arrow Functions</title>
+</head>
+<body>
+  <h2>Task 2: Function Expressions & Arrow Functions</h2>
+
+  <h4>Function Expression:</h4>
+  <button onclick="sayHi()">Call Function Expression</button>
+
+  <h4>Arrow Function:</h4>
+  <button onclick="arrowGreet()">Call Arrow Function</button>
+
+  <h4>Arrow Function - Sum:</h4>
+  <button onclick="sumArrow(4, 6)">Call sumArrow(4, 6)</button>
+
+  <p> (Right-click > Inspect > Console)</p>
+
+  <script>
+    
+    const sayHi = function () {
+      console.log("Hi! This is a function expression.");
+    };
+
+   
+    const arrowGreet = () => {
+      console.log("Hello from an arrow function!");
+    };
+
+    
+    const sumArrow = (a, b) => {
+      const sum = a + b;
+      console.log(`Sum using arrow function: ${sum}`);
+      return sum;
+    };
+  </script>
+</body>
+</html>
